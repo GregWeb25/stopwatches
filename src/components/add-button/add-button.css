@@ -1,0 +1,22 @@
+.add-button{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #9E9E9E;
+    font-size: 22px;
+}
+.add-button:hover{
+    background: rgba(0, 0, 0, 0.05);
+}
+.add-button:active{
+    background: rgba(0, 0, 0, 0.15);
+}
+.plus{
+    width: 20px;
+    height: 20px;
+}
