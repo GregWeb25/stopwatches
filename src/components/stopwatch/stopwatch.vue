@@ -67,12 +67,19 @@ export default {
     reset(){
       this.isActive = false;
       this.time = 0;
+    },
+    calculateTime(startTime){
+      let time = Math.floor((Date.now() - startTime)/1000);
+      return time;
     }
   },
   watch: {
     isActive(oldValue){
       if(oldValue){
-        this.interval = setInterval(() => this.time ++, 1000);
+        const startTime = Date.now();
+
+
+        this.interval = setInterval(() => this.time = this.calculateTime(startTime), 100);
       } else {
         clearInterval(this.interval);
       }
